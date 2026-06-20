@@ -8,6 +8,8 @@
 
 + Schema Ingestion Awareness: Trusting Auto detect but actively auditing the result keeps your data clean.
 
+> 📊 **Analytical Scale Note:** All financial investment metrics (`Budget_usd`, `Box_Office_Revenue_usd`, and `baseline_profit`) are recorded in **USD ($)**. For high-level executive reporting, these baseline figures scale into the **millions of dollars** (e.g., a record displaying `101800000` represents **$101.8M USD**). The `baseline_roi` column represents a pure percentage ratio format.
+
 🔍 Analyzing the Baseline Reality - Phase 1
 Looking closely at the top 11 rows, the baseline query just exposed a massive strategic pattern in traditional media economics:
 
