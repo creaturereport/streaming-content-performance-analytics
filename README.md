@@ -51,7 +51,7 @@ ORDER BY
  `baseline_roi` DESC;
 ```
 ---
-* **The Critical Finding: Uncovered a massive structural pattern in traditional media economics where the Horror genre completely dominates macro-level profitability metrics. Low-budget productions ($1M USD) such as The Devil Inside and Unfriended generate astronomical ROI ratios (100.8 and 63.1 respectively), proving why baseline programming operations rely heavily on these content profiles before factoring in viewer retention variables.
+* **The Critical Finding:** Uncovered a massive structural pattern in traditional media economics where the Horror genre completely dominates macro-level profitability metrics. Low-budget productions ($1M USD) such as The Devil Inside and Unfriended generate astronomical ROI ratios (100.8 and 63.1 respectively), proving why baseline programming operations rely heavily on these content profiles before factoring in viewer retention variables.
 
 ### 🛠️ Source-System Ingestion & Data Quality Log
 
