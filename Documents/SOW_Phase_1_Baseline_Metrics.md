@@ -22,7 +22,7 @@ This phase maps out the distribution of production costs relative to genre categ
 | :--- | :--- |
 | **Environment Setup & Data Ingestion** | Access the Google Cloud Platform sandbox, initialize a BigQuery workspace console, and ingest the raw catalog database. |
 | **Schema Assessment & Data Hygiene** | Audit the technical structure of the imported catalog fields, verifying data types for numeric currencies (`Budget_usd`, `Box_Office_Rev`) and strings (`Genre_1`, `Movie_Title`) to fix any broken data types or null values. |
-| **SQL Transformation & Aggregation** | Develop and execute clean, well-commented SQL scripts utilizing initial exploratory syntax to isolate variables and calculate base Return on Investment ($$ROI = \frac{\text{Box\_Office\_Rev} - \text{Budget\_usd}}{\text{Budget\_usd}}$$) metrics across diverse content genres. |
+| **SQL Transformation & Aggregation** | Develop and execute clean, well-commented SQL scripts utilizing initial exploratory syntax to isolate variables and calculate base Return on Investment $$ROI = \frac{\text{Box\_Office\_Rev} - \text{Budget\_usd}}{\text{Budget\_usd}}$$ |
 | **Insight Generation & Reporting** | Contrast unmanipulated data structures against standard relational expectations to deliver a definitive data validation report for strategic programming leadership. |
 
 ---
