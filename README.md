@@ -67,15 +67,15 @@ During the initial table migration from the Google Sheets sandbox environment in
 * **The SQL Logic:**
 ```sql
 SELECT
-  `Movie_Title`,
+  `Movie Title`,
   `Genre_1`,
   `Budget_usd`,
-  `Box_Office_Rev`,
+  `Box Office Revenue_usd`,
   -- Calculate the baseline financial footprint
-  (`Box_Office_Rev` - `Budget_usd`) AS `baseline_profit`,
+  (`Box Office Revenue_usd` - `Budget_usd`) AS `baseline_profit`,
   -- Advanced Metrics: Audience Retention Decay Coefficient modeling
   -- Formulas sort results in ascending order to isolate immediate platform drops
-  ROUND((`Box_Office_Rev` / `Budget_usd`) * 0.75, 2) AS `retention_coefficient`
+  ROUND((`Box Office Revenue_usd` / `Budget_usd`) * 0.75, 2) AS `retention_coefficient`
 FROM
   `healthy-bonsai-231119.Movie_Data.Movie_Data_Scenario_1`
 ORDER BY
@@ -84,10 +84,24 @@ ORDER BY
 * **The Critical Finding:** Successfully isolated extreme platform drop-offs, identifying "The Oogieloves in the Big Balloon Adventure" as the lowest-performing catalog property with a catastrophic retention coefficient of 0.04 and a net financial deficit of -$18.9M. The query further exposed a vulnerability in the Biography genre (e.g., Hands of Stone at 0.06 and My All American at 0.08), proving that these assets fail to protect subscriber engagement over time and should face rapid decommissioning to optimize infrastructure storage allocations.
 ---
 
+---
+
 ## 🚨 Scenario 3: High-Cost Renewal Risk Isolation (Descending Cost-Per-Viewer Modeling)
 * **Objective:** Rearrange financial catalog constraints to isolate heavy special-effects and star-studded ensembles demanding massive operational budgets. This script surfaces high-risk financial bottlenecks where content sustainability thresholds collapse due to low audience retention.
-
-* **The SQL Logic: (Staged for Phase 3 Deployment)**
+* **The SQL Logic:**
 ```sql
+SELECT
+  `Movie_Title`,
+  `Genre_1`,
+  `Budget_usd`,
+  `Box_Office_Rev`,
+  -- Isolate the core profit metric
+  (`Box_Office_Rev` - `Budget_usd`) AS `baseline_profit`,
+  -- Calculate the retention coefficient to look for financial exposure
+  ROUND((`Box_Office_Rev` / `Budget_usd`) * 0.75, 2) AS `retention_coefficient`
+FROM
+  `healthy-bonsai-231119.Movie_Data.Movie_Data_Scenario_1`
+ORDER BY
+  `Budget_usd` DESC;
 ```
 ---
